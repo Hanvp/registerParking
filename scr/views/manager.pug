@@ -1,0 +1,14 @@
+extends base
+include mixins/car
+
+block header 
+    nav 
+        ul 
+            li 
+                a(href="/manager/check") 오늘 이용 내역 확인
+
+block content 
+    each car in cars
+        +car(car)
+    else 
+        li 등록된 차량이 없습니다.

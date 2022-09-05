@@ -1,0 +1,24 @@
+extends base
+include mixins/car
+
+block content 
+    form(method="POST")
+        input(name = "carNumber", placeholder = "차량 번호", required, type = "text")
+        br
+        label.v-checkbox
+            input(type = "checkbox", name = "1")
+            .v-label 1시간
+        label.v-checkbox
+            input(type = "checkbox", name = "2")
+            .v-label 2시간
+        label.v-checkbox
+            input(type = "checkbox", name = "3")
+            .v-label 3시간
+        input(type = "submit", value = "등록");
+    hr
+    div
+        h2 차량 등록 내역
+        each car in cars 
+            +car(car)
+        else 
+            h3 등록된 차량이 없습니다.

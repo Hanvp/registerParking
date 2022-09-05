@@ -1,0 +1,8 @@
+extends base
+include mixins/car
+
+block content
+    each car in cars 
+                +car(car)
+            else 
+                h3 등록된 차량이 없습니다.

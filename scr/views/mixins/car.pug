@@ -1,0 +1,10 @@
+mixin car(car)
+    div 
+        h3 
+            h4 car.number 
+            h5 car.useHour
+        br
+        small car.registeredTime 
+        if deleteInfo
+            a(href=`/${car.id}/delete`) button
+        hr
